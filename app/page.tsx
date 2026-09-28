@@ -312,7 +312,6 @@ export default function Home() {
         </p>
         <nav className="footer-links" aria-label="Footer">
           <a href="#responsible-use">Responsible use</a>
-          <a href={downloads.all}>All releases</a>
         </nav>
         <p className="copyright">© {new Date().getFullYear()} William Sheen Lim. All rights reserved.</p>
       </footer>
