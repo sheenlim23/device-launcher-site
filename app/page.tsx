@@ -234,7 +234,7 @@ export default function Home() {
             </div>
             <div className="note">
               <h3>What you need</h3>
-              <p>For emulators: the Android SDK emulator and platform tools on your PC. For your phone: the phone and PC on the same Wi-Fi. Control needs Android 7 or newer.</p>
+              <p>Nothing else to install. On first launch, one click downloads Google’s Android emulator and an Android version for you (about 2.3 GB, once). For your phone: the phone and PC on the same Wi-Fi. Control needs Android 7 or newer.</p>
             </div>
           </div>
         </section>
