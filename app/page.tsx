@@ -254,12 +254,44 @@ export default function Home() {
             ))}
           </div>
         </section>
+        {/* RESPONSIBLE USE */}
+        <section id="responsible-use" className="section">
+          <div className="disclaimer">
+            <div className="disclaimer-head">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M12 3 2.5 20h19L12 3Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                <path d="M12 10v4.5M12 17.2h.01" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+              <h2>Responsible use</h2>
+            </div>
+            <p>
+              Device Launcher and Device Link are for viewing and controlling <b>devices you own</b>, or devices whose owner has
+              clearly agreed. Using them to watch, control or access someone else’s phone without their knowledge and consent is
+              not allowed. That includes spying, stalking, fraud, or getting into accounts, messages or banking apps that aren’t
+              yours.
+            </p>
+            <p>
+              Accessing another person’s device without permission may be a crime under privacy, computer-misuse and anti-hacking
+              laws where you live. You are fully responsible for how you use this software. The developer does not support, and is
+              not responsible or liable for, any illegal, harmful or malicious use.
+            </p>
+            <p className="disclaimer-small">
+              The software is provided “as is”, without warranty of any kind. Use it at your own risk.
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer className="footer">
         <div className="brand"><PhoneMark size={20} /> Device Launcher</div>
-        <p>Made for Windows · Android emulators and real phones, side by side.</p>
-        <a href={downloads.all}>All releases</a>
+        <p className="credit">
+          Designed and developed by <b>William Sheen Lim</b>, creator of Device Launcher and Device Link.
+        </p>
+        <nav className="footer-links" aria-label="Footer">
+          <a href="#responsible-use">Responsible use</a>
+          <a href={downloads.all}>All releases</a>
+        </nav>
+        <p className="copyright">© {new Date().getFullYear()} William Sheen Lim. All rights reserved.</p>
       </footer>
     </>
   );

@@ -14,6 +14,8 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Device Launcher',
+  authors: [{ name: 'William Sheen Lim' }],
+  creator: 'William Sheen Lim',
   description:
     'Run Android emulators without Android Studio, and see and control your real Android phone on your Windows PC. Pair with one QR code.',
   openGraph: {

@@ -392,8 +392,27 @@ details p { padding: 0 20px 18px; color: var(--muted); max-width: 44em; }
   color: var(--dim); font-size: 14px;
 }
 .footer .brand { font-size: 15px; }
-.footer a { margin-left: auto; color: var(--muted); text-decoration: none; }
-.footer a:hover { color: var(--cyan); }
+.footer .credit b { color: var(--text); font-weight: 600; }
+.footer-links { margin-left: auto; display: flex; gap: 20px; }
+.footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--cyan); }
+.footer .copyright { flex-basis: 100%; font: 400 12.5px/1.4 var(--mono); color: var(--dim); }
+
+/* responsible use */
+.disclaimer {
+  max-width: 52rem;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid rgba(255, 176, 72, 0.35);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(255, 176, 72, 0.08), rgba(10, 15, 24, 0.6) 55%);
+  display: grid;
+  gap: 14px;
+}
+.disclaimer-head { display: flex; align-items: center; gap: 12px; color: #ffb048; }
+.disclaimer-head h2 { font-size: clamp(22px, 2.6vw, 28px); color: var(--text); }
+.disclaimer p { color: var(--muted); max-width: 46em; }
+.disclaimer p b { color: var(--text); }
+.disclaimer-small { font-size: 13.5px; color: var(--dim) !important; }
 
 /* ---------- motion ---------- */
 .reveal { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
@@ -424,5 +443,5 @@ details p { padding: 0 20px 18px; color: var(--muted); max-width: 44em; }
   .uses, .steps, .notes { grid-template-columns: 1fr; }
   .ctl-chip { display: none; }
   .cta .btn { flex: 1 1 100%; justify-content: center; }
-  .footer a { margin-left: 0; }
+  .footer-links { margin-left: 0; }
 }
