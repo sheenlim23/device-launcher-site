@@ -6,5 +6,7 @@ export const downloads = {
   installer: `${RELEASES}/latest/download/DeviceLauncher-Setup.exe`,
   portable: `${RELEASES}/latest/download/DeviceLauncher-Portable.exe`,
   apk: `${RELEASES}/latest/download/device-link.apk`,
+  appImage: `${RELEASES}/latest/download/DeviceLauncher-x86_64.AppImage`,
+  deb: `${RELEASES}/latest/download/device-launcher_amd64.deb`,
   all: RELEASES,
 };

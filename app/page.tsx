@@ -26,6 +26,7 @@ const faq = [
   { q: 'Why do banking apps show a black screen?', a: <>Banking apps block screen capture to protect you. Your phone shows them normally; only the copy on your PC is black.</> },
   { q: 'Why did Play Protect warn me about Device Link?', a: <>Device Link isn’t from the Play Store, and it uses Accessibility so your PC can tap and type on the phone. Play Protect is cautious about that combination. Tap <b>More details → Install anyway</b>. You can turn the Accessibility switch off at any time; the app then works in view-only mode.</> },
   { q: 'Can someone else see my phone?', a: <>Only a PC that scanned your QR code can connect, and each pairing gets its own random key. Use it on a Wi-Fi network you trust.</> },
+  { q: 'Which computers does it run on?', a: <>Windows 10 and 11 (64-bit), and 64-bit Linux: Ubuntu, Debian, Fedora and most other distros through the AppImage.</> },
   { q: 'Does it work with iPhone?', a: <>No. Device Launcher is for Android phones and Android emulators.</> },
 ];
 
@@ -53,7 +54,7 @@ export default function Home() {
         {/* HERO */}
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow reveal"><span className="pulse" /> Windows 10 / 11 · free</p>
+            <p className="eyebrow reveal"><span className="pulse" /> Windows · Linux · free</p>
             <h1 className="reveal d1">
               Every Android screen,
               <br />
@@ -227,6 +228,21 @@ export default function Home() {
               <span className="dl-go">device-link.apk →</span>
             </a>
           </div>
+
+          <p className="dl-os"><span className="tux" aria-hidden="true">◆</span> Linux · 64-bit</p>
+          <div className="dl-grid dl-grid-2">
+            <a className="dl" href={downloads.appImage}>
+              <b>AppImage</b>
+              <span>Any distro · 125 MB. Download, make it executable, run.</span>
+              <span className="dl-go">DeviceLauncher-x86_64.AppImage →</span>
+            </a>
+            <a className="dl" href={downloads.deb}>
+              <b>.deb package</b>
+              <span>Ubuntu, Debian, Linux Mint, Pop!_OS · 100 MB</span>
+              <span className="dl-go">device-launcher_amd64.deb →</span>
+            </a>
+          </div>
+
           <div className="notes">
             <div className="note">
               <h3>Windows says “Windows protected your PC”</h3>
@@ -235,6 +251,13 @@ export default function Home() {
             <div className="note">
               <h3>What you need</h3>
               <p>Nothing else to install. On first launch, one click downloads Google’s Android emulator and an Android version for you (about 2.3 GB, once). For your phone: the phone and PC on the same Wi-Fi. Control needs Android 7 or newer.</p>
+            </div>
+            <div className="note">
+              <h3>On Linux</h3>
+              <p>
+                Install the .deb with <code>sudo apt install ./device-launcher_amd64.deb</code>. The AppImage needs <code>libfuse2</code> on Ubuntu 22.04+.
+                Emulators use KVM; the app offers to set it up for you. Tile windows works on X11 desktops.
+              </p>
             </div>
           </div>
         </section>
